@@ -4,4 +4,26 @@ random:
 daily:
   - cn:  想不到这一代我第一次打的神殿竟然还是水神殿，不过水滴那一点我是真的没有想到，还是看攻略才知道是那个意思。
     en:  I didn't expect that the first temple I played in this generation was actually the Water Temple, but I really didn't expect that drop of water, and I didn't know it was that meaning until I read the strategy.
-    tag: daily-hyrule
+    tag: 王国之泪
+  - cn: |
+      稍微计划的接下来两个月的要写的文章，不过可能会有变动，不过大概率是这样的（其实大多是水文）
+      1. 用三分钟对你个人电脑上的 ssh 私钥进行加密吧
+      2. 使用 Docker 部署 MongoDB 并配置 TLS
+      3. 天国大魔境 - 从天而降的穿越时空的柴刀
+      4. 不死不幸 - 单纯靠设定就很有趣的作品
+      5. 即使这样小镇依然转动 - 谁翻译的女仆咖啡厅 - 安利篇 
+      6. 简明易懂的端到端加密文件存储方案
+      7. 石黑正数作品中的异时空同位体角色 - 整理篇
+      8. 王国之泪游玩记录 - 海拉鲁大陆地区景点巡游
+      9. NANA - 爱情的真伪 - 朋克之诗
+    en: |
+      The articles to be written in the next two months with a little planning, but there may be changes, but it is probably like this (in fact, most of them are water articles)
+      1. Encrypt your ssh private key on your personal computer in three minutes
+      2. Deploy MongoDB with Docker and configure TLS
+      3. Heavenly Delusion - The Chopper That Travels Through Time and Space
+      4. Undead Unluck - Works that are interesting purely by setting
+      5. And Yet The Town Moves - Recommended article
+      6. A simple and easy-to-understand end-to-end encrypted file storage solution
+      7. The role of isochronous isotopes in Ishiguro Masakazu's works - collation
+      8. Kingdom of Tears Play Record - Hailaru Continent Attractions Tour
+      9. NANA - The Truth of Love - Punk Poetry
