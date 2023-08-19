@@ -1,8 +1,10 @@
 import configparser
+import yaml
+from trello import TrelloClient
+
 config = configparser.ConfigParser()
 config.read('config.ini')
 
-from trello import TrelloClient
 
 trello_client = TrelloClient(
     api_key=config["defaut"]["api_key"],
@@ -15,9 +17,8 @@ print(last_board.name)
 print(all_boards[0].list_lists()[4].name)
 print(all_boards[0].list_lists()[4].id)
 
-import yaml
 
-with open("docs/2023/08-3.yml") as f:
+with open("docs/2023/08-3.yml", 'r', encoding='utf-8') as f:
     yml_str = f.read()
 data = yaml.safe_load(yml_str)
 
