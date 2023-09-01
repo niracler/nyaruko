@@ -10,7 +10,8 @@ skip_folder = [
     '.obsidian',
 ]
 
-BASE_PATH = '/Users/niracler/iCloud云盘（归档）/Obsidian/Note/'
+BASE_PATH = '/Users/niracler/iCloud云盘（归档）/Obsidian/Note'
+
 
 def list_markdown_files(folder_path: str, level=0) -> int:
     """
@@ -21,6 +22,8 @@ def list_markdown_files(folder_path: str, level=0) -> int:
 
     count = 0
     file_list = os.listdir(folder_path)
+    basedir = os.path.basename(folder_path)
+    print(f"{level * '│  '}{basedir}")
 
     for file_name in file_list:
         file_path = os.path.join(folder_path, file_name)
@@ -32,15 +35,14 @@ def list_markdown_files(folder_path: str, level=0) -> int:
             count += list_markdown_files(file_path, level + 1)
 
     if count > 0:
-        folder_path = folder_path.replace(BASE_PATH, '')
-        print(folder_path + ": " + str(count))
+        print(f"{level * '│  '}└── ({count})")
 
     return count
+
 
 @click.command()
 def cli():
     """
     scan the folder
     """
-    click.echo("Hello World!")
     list_markdown_files(BASE_PATH, level=0)
