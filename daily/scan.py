@@ -1,25 +1,46 @@
+"""
+statistic the articles in the folder
+"""
 import os
 import click
 
-def list_python_files(folder_path):
-    # 获取文件夹中所有文件的列表
+skip_folder = [
+    'backup',
+    'media',
+    '.obsidian',
+]
+
+BASE_PATH = '/Users/niracler/iCloud云盘（归档）/Obsidian/Note/'
+
+def list_markdown_files(folder_path: str, level=0) -> int:
+    """
+    recursively list all markdown files in the folder
+    """
+    if os.path.basename(folder_path) in skip_folder:
+        return 0
+
+    count = 0
     file_list = os.listdir(folder_path)
 
-    # 迭代遍历文件列表
     for file_name in file_list:
-        file_path = os.path.join(folder_path, file_name)  # 获取文件的绝对路径
+        file_path = os.path.join(folder_path, file_name)
 
-        # 判断文件是否是以 '.py' 结尾
         if file_path.endswith('.md') and os.path.isfile(file_path):
-            print(file_name)  # 输出文件名
+            count += 1
 
-        # 判断文件是否是文件夹
         elif os.path.isdir(file_path):
-            # 递归调用函数来遍历子文件夹
-            list_python_files(file_path)
+            count += list_markdown_files(file_path, level + 1)
+
+    if count > 0:
+        folder_path = folder_path.replace(BASE_PATH, '')
+        print(folder_path + ": " + str(count))
+
+    return count
 
 @click.command()
 def cli():
+    """
+    scan the folder
+    """
     click.echo("Hello World!")
-    folder_path = '/Users/niracler/iCloud云盘（归档）/Obsidian/Note/'
-    list_python_files(folder_path)
+    list_markdown_files(BASE_PATH, level=0)
