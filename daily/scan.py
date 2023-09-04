@@ -40,9 +40,16 @@ def list_markdown_files(folder_path: str, level=0) -> int:
     return count
 
 
-@click.command()
+@click.group()
 def cli():
     """
     scan the folder
+    """
+    pass
+
+@cli.command("list")
+def list_articles():
+    """
+    list the articles
     """
     list_markdown_files(BASE_PATH, level=0)
