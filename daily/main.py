@@ -34,9 +34,3 @@ print(card.name)
 card.comment(comment[-1]['cn'])
 
 print("done")
-
-
-
-
-
-

@@ -60,12 +60,7 @@ def list_articles(tree: bool, tag: str):
         list_article_as_tree(BASE_PATH, level=0)
         return
 
-    file_headers = list_articles_with_tag(BASE_PATH, tag)
-    # 打印提取的信息
-    # for header in file_headers:
-    #     print("Date:", header['date'])
-    #     print("Tags:", header['tags'])
-    #     print("---")
+    list_articles_with_tag(BASE_PATH, tag)
 
 
 # TODO: list the articles with tag
@@ -111,7 +106,7 @@ def list_articles_with_tag(base_path, tag:str):
                     try:
                         header_object = yaml.load(header_content, Loader=yaml.FullLoader)
                         # print("Parsed Header Object:")
-                        # print(header_object)
+                        print(header_object, filename )
                     except yaml.YAMLError as error:
                         print("path:", file_path)
                         print("Error parsing YAML:", error)
