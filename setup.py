@@ -1,3 +1,6 @@
+"""
+Setup file for nyaruko
+"""
 from setuptools import setup
 
 setup(
@@ -9,6 +12,7 @@ setup(
     },
     install_requires=[
         'Click',
+        'python-telegram-bot[socks]'
     ],
     entry_points='''
         [console_scripts]
