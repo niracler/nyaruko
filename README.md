@@ -5,8 +5,6 @@ This repository is for someone to accomplish something.
 ## Build
 
 ```bash
-x python -m venv venv
-source venv/bin/activate
 x python -m pip install --editable .
 ```
 
