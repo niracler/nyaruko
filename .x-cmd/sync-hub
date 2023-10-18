@@ -1,0 +1,15 @@
+# shellcheck shell=dash
+
+article_line=$(grep 'article_dir' config.ini)
+article_dir=$(echo "$article_line" | cut -d '=' -f 2 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+
+x:info "Syncing '$article_dir' articles to hub..." 
+start_time=$(date +%s)
+
+x fd -t f . "$article_dir" | while read -r article_path; do
+    x hub file eput -f "$article_path" "${article_path#"$article_dir/"}"
+done
+
+end_time=$(date +%s)
+time_diff=$((end_time - start_time))
+echo "时间差为 $time_diff 秒"
