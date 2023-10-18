@@ -32,6 +32,20 @@ def cli(ctx, debug):
     ctx.obj['DEBUG'] = debug
 
 
+@cli.command("list")
+def list_article():
+    """
+    Lists all article from the obsidian.
+    """
+    article_dir = config["default"]["article_dir"]
+
+    for root, dirs, files in os.walk(article_dir):
+        for file in files:
+            if file.endswith(".md"):
+                article_path = os.path.join(root, file)[len(article_dir) + 1:]
+                click.echo(article_path)
+
+
 @cli.command("ascii")
 @click.option("--big", is_flag=True, help="Print the big ascii art of nyaruko.")
 def show_ascii(big):

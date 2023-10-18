@@ -7,7 +7,7 @@ x:info "Syncing '$article_dir' articles to hub..."
 start_time=$(date +%s)
 
 x fd -t f . "$article_dir" | while read -r article_path; do
-    x hub file eput -f "$article_path" "${article_path#"$article_dir/"}"
+    x hub file eput -f "$article_path" "obsidian/${article_path#"$article_dir/"}"
 done
 
 end_time=$(date +%s)
