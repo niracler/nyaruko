@@ -10,7 +10,7 @@ x python -m pip install --editable .
 
 ## Usage
 
-```
+```txt
 $ ny ascii
                                    .:--------------:.
                              :--===-::::::::::::::::-==--.
