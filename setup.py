@@ -1,15 +1,13 @@
 """
 Setup file for nyaruko
 """
-from setuptools import setup
+from setuptools import find_packages, setup
 
 setup(
     name="nyaruko",
     version='0.1',
-    py_modules=['nyaruko.main'],
-    package_data={
-        'nyaruko': ['data/*.txt'],
-    },
+    packages=find_packages(),
+    include_package_data=True,
     install_requires=[
         'Click',
         'python-telegram-bot[socks]'
