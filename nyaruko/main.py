@@ -54,6 +54,7 @@ def run_bot(daemon):
             "Hi! I'm Nyaruko, your personal assistant. "
             "I'm still under development, but you can talk to me if you want."
         )
+        return None
 
     app = ApplicationBuilder().get_updates_proxy_url(config["telegram"]["proxy"]).token(
         config["telegram"]["token"]).build()
