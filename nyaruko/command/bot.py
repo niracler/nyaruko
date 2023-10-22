@@ -1,7 +1,7 @@
 import click
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
-from nyaruko.config import config
+from nyaruko.config import nyaruko_config
 
 async def telegram_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """
@@ -25,8 +25,8 @@ def run_bot(daemon):
         )
         return None
 
-    app = ApplicationBuilder().get_updates_proxy_url(config["telegram"]["proxy"]).token(
-        config["telegram"]["token"]).build()
+    app = ApplicationBuilder().get_updates_proxy_url(nyaruko_config["telegram"]["proxy"]).token(
+        nyaruko_config["telegram"]["token"]).build()
 
     app.add_handler(CommandHandler("start", telegram_start))
     app.run_polling()

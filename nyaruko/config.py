@@ -1,4 +1,4 @@
 import configparser
 
-config = configparser.ConfigParser()
-config.read('config.ini')
+nyaruko_config = configparser.ConfigParser()
+nyaruko_config.read('config.ini')
