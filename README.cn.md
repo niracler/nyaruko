@@ -1,6 +1,6 @@
 # Nyaruko
 
-这个仓库是为了让某人完成某事而创建的。
+我也不知道要干什么的一个仓库。
 
 ## 构建
 
@@ -9,6 +9,23 @@ x python -m pip install --editable .
 ```
 
 ## 用法
+
+```bash
+$ ny
+Usage: ny [OPTIONS] COMMAND [ARGS]...
+
+  This is the main entry point for nyaruko.
+
+Options:
+  --debug / --no-debug  Print debug messages.
+  --help                Show this message and exit.
+
+Commands:
+  ascii  Prints the ASCII art of nyaruko.
+  bot    Runs the telegram bot.
+  list   Lists all article from the sqlite.
+  sync   Syncs the obsidian article to the sqlite.
+```
 
 ```txt
 $ ny ascii
@@ -47,6 +64,20 @@ $ ny ascii
    :+--*++------=+--+#@*. .-=**=---:-+ .*=@%#:-%*%#--*
    *--++*=-----=++-=+**   :.-*#+---:*%++%*@%%#+*-+:=--+
   =---+++------=++=+*%-     :=%+=---*#::+*####%#=#%*=-:-
+```
+
+## 配置文件
+
+```toml
+[default]
+
+article_dir = '/path/to/your/obsidian/vault'
+block_dir_list = ["block", "block2"]
+
+[telegram]
+
+token = ********:************************************
+proxy = socks5://<ip>:<port>
 ```
 
 ## 词源

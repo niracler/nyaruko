@@ -2,6 +2,8 @@
 
 This repository is for someone to accomplish something.
 
+[中文文档](README.cn.md)
+
 ## Build
 
 ```bash
@@ -9,6 +11,23 @@ x python -m pip install --editable .
 ```
 
 ## Usage
+
+```bash
+$ ny
+Usage: ny [OPTIONS] COMMAND [ARGS]...
+
+  This is the main entry point for nyaruko.
+
+Options:
+  --debug / --no-debug  Print debug messages.
+  --help                Show this message and exit.
+
+Commands:
+  ascii  Prints the ASCII art of nyaruko.
+  bot    Runs the telegram bot.
+  list   Lists all article from the sqlite.
+  sync   Syncs the obsidian article to the sqlite.
+```
 
 ```txt
 $ ny ascii
@@ -47,6 +66,20 @@ $ ny ascii
    :+--*++------=+--+#@*. .-=**=---:-+ .*=@%#:-%*%#--*
    *--++*=-----=++-=+**   :.-*#+---:*%++%*@%%#+*-+:=--+
   =---+++------=++=+*%-     :=%+=---*#::+*####%#=#%*=-:-
+```
+
+## Config
+
+```toml
+[default]
+
+article_dir = '/path/to/your/obsidian/vault'
+block_dir_list = ["block", "block2"]
+
+[telegram]
+
+token = ********:************************************
+proxy = socks5://<ip>:<port>
 ```
 
 ## Etymology
