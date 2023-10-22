@@ -4,6 +4,10 @@ This repository is for someone to accomplish something.
 
 [中文文档](README.cn.md)
 
+<div align=center>
+  <img width="400" src="https://github.com/niracler/nyaruko/assets/24842631/23c3e818-2c06-4589-a226-2ccd310d51db">
+</div>
+
 ## Build
 
 ```bash
@@ -28,11 +32,6 @@ Commands:
   list   Lists all article from the sqlite.
   sync   Syncs the obsidian article to the sqlite.
 ```
-
-<div align=center>
-  <img width="400" src="https://github.com/niracler/nyaruko/assets/24842631/23c3e818-2c06-4589-a226-2ccd310d51db">
-</div>
-
 
 ## Config
 
