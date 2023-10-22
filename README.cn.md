@@ -1,16 +1,14 @@
 # Nyaruko
 
-This repository is for someone to accomplish something.
+我也不知道要干什么的一个仓库。
 
-[中文文档](README.cn.md)
-
-## Build
+## 构建
 
 ```bash
 x pip install --editable .
 ```
 
-## Usage
+## 用法
 
 ```bash
 $ ny
@@ -68,7 +66,7 @@ $ ny ascii
   =---+++------=++=+*%-     :=%+=---*#::+*####%#=#%*=-:-
 ```
 
-## Config
+## 配置文件
 
 ```toml
 [default]
@@ -82,6 +80,6 @@ token = ********:************************************
 proxy = socks5://<ip>:<port>
 ```
 
-## Etymology
+## 词源
 
-Nyaruko is a character from [Nyaruko: Crawling with Love](https://en.wikipedia.org/wiki/Nyaruko:_Crawling_with_Love)
+Nyaruko 是 [Nyaruko: Crawling with Love](https://en.wikipedia.org/wiki/Nyaruko:_Crawling_with_Love) 中的一个角色。
