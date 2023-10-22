@@ -5,7 +5,7 @@
 ## 构建
 
 ```bash
-x python -m pip install --editable .
+x pip install --editable .
 ```
 
 ## 用法

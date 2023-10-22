@@ -7,7 +7,7 @@ This repository is for someone to accomplish something.
 ## Build
 
 ```bash
-x python -m pip install --editable .
+x pip install --editable .
 ```
 
 ## Usage
