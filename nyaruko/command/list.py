@@ -7,7 +7,7 @@ from nyaruko.config import config
 @click.command()
 def list_article():
     """
-    Lists all article from the obsidian.
+    Lists all article from the sqlite.
     """
     article_dir = config["default"]["article_dir"]
 
