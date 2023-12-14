@@ -6,6 +6,9 @@ article_dir=$(echo "$article_line" | cut -d '=' -f 2 | sed 's/^[[:space:]]*//;s/
 x:info "Syncing '$article_dir' articles to hub..." 
 start_time=$(date +%s)
 
+x pkg xbin init openssl
+x pkg xbin init 7za
+
 x fd -t f . "$article_dir" | while read -r article_path; do
     x hub file eput -f "$article_path" "obsidian/${article_path#"$article_dir/"}"
 done
