@@ -1,3 +1,7 @@
+"""
+show_ascii
+"""
+
 import os
 import click
 

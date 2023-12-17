@@ -6,6 +6,8 @@ from nyaruko.command.ascii import show_ascii
 from nyaruko.command.bot import run_bot
 from nyaruko.command.sync import sync
 from nyaruko.command.list import list_article
+from nyaruko.command.telegram import telegram
+from nyaruko.command.embeding import embeding
 
 
 @click.group()
@@ -23,3 +25,5 @@ cli.add_command(sync)
 cli.add_command(show_ascii, "ascii")
 cli.add_command(list_article, "list")
 cli.add_command(run_bot, "bot")
+cli.add_command(telegram, "tg")
+cli.add_command(embeding, "embed")

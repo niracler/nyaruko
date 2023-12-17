@@ -10,7 +10,11 @@ setup(
     include_package_data=True,
     install_requires=[
         'Click',
-        'python-telegram-bot[socks]'
+        'python-telegram-bot[socks]',
+        'telethon',
+        'openai',
+        'sqlite-vss',
+        'pandas',
     ],
     entry_points='''
         [console_scripts]

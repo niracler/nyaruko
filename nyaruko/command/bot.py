@@ -1,3 +1,7 @@
+"""
+Telegram bot command.
+"""
+
 import click
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
