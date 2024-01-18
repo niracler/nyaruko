@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "nyaruko"
+version = "0.0.0"
+description = "This repository is for someone to accomplish something."
+authors = ["niracler <i@niracler.com>"]
+license = "GPL-3.0 license"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-telegram-bot = { extras = ["socks"], version = "^20.7" }
+click = "^8.1.7"
+
+
+[tool.poetry.group.dev.dependencies]
+python-semantic-release = "^8.7.0"
+
+[tool.poetry.scripts]
+ny = "nyaruko.main:cli"
+nyaruko = "nyaruko.main:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+version_variable = "nyaruko/__init__.py:__version__"
+upload_to_pypi = true
+upload_to_release = true
+branch = "main"
+changelog_file = "CHANGELOG.md"
