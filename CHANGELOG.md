@@ -6,11 +6,7 @@
 
 ### Chore
 
-* chore: update release workflow ([`6bbe4d8`](https://github.com/niracler/nyaruko/commit/6bbe4d8c06a8f1090e859b706b275e8aa06946f6))
-
-* chore: use poetry to release package ([`c1b0c59`](https://github.com/niracler/nyaruko/commit/c1b0c5992216f7c503c3a8d3c359d73514c11f40))
-
-* chore: use poetry to release package ([`797ee19`](https://github.com/niracler/nyaruko/commit/797ee199ae0310a0ec0da978f8ab584746cbfec4))
+* chore: update release workflow ([`33f5894`](https://github.com/niracler/nyaruko/commit/33f5894f0553ac0bb26b08e3f96d74e1d2bbcde5))
 
 ### Documentation
 
