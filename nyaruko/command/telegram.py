@@ -87,11 +87,3 @@ async def main():
 # 当该脚本作为主程序运行时
 if __name__ == '__main__':
     client.loop.run_until_complete(main())
-
-@click.command()
-def telegram():
-    """
-    export telegram data
-    """
-    with client:
-        client.loop.run_until_complete(main())
