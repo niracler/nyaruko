@@ -7,7 +7,7 @@ license = "GPL-3.0 license"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.9"
 python-telegram-bot = { extras = ["socks"], version = "^20.7" }
 click = "^8.1.7"
 
